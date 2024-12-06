@@ -1,0 +1,19 @@
+﻿<Window x:Class="PhysicsSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Physics Simulator" Height="627" Width="800">
+    <Grid>
+        <Canvas x:Name="SimulationCanvas" Background="LightGray" Margin="215,10,0,0" />
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Button Content="Добавить шар" Click="AddBall_Click" />
+            <Button Content="Запуск" Click="StartSimulation_Click" />
+            <Button Content="Пауза" Click="PauseSimulation_Click" />
+            <Button Content="Сброс" Click="ResetSimulation_Click" />
+            <Slider x:Name="GravitySlider" Minimum="0" Maximum="10" Value="0" 
+                    ValueChanged="GravitySlider_ValueChanged" 
+                    Width="200" Margin="5" 
+                    ToolTip="Гравитация" />
+            <TextBlock Text="Гравитация:" Margin="5" />
+        </StackPanel>
+    </Grid>
+</Window>
